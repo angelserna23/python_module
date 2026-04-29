@@ -51,4 +51,68 @@ for x in range(6):
     print(x)
 else:
     print("Proceso terminado")
+
+
+#-----------------------------------
+arreglo = [9,41,12,3,74,15]
+numero_mayor = 0
+index = 0
+
+for numero in arreglo:
+    if numero > arreglo[index]:
+        numero_mayor = numero
+    else:
+        numero_mayor = numero_mayor
+    index =+ 1
+
+print(f"El numero mayor del arreglo es: {numero_mayor}")
+
+#--------------------------
+frutas = ['manzana','fresa','cereza']
+for fruta in frutas:
+    print(fruta)
     
+    if fruta == "fresa":
+        break
+
+for x in range(6):
+    if x == 3: break
+    print(x)
+else:
+    print("Proceso terminado")
+
+#---------------------------------
+base = {'Jose': 85,'Angela': 92,'Miguel': 75,'Ana': 98}
+nombre = input("Ingrese el nombre del estudiante que quiera consultar: ")
+
+for estudiante in base:
+    if estudiante == nombre:
+        print(f"Calificacion: {base[estudiante]}")
+        break
+else:
+    "No se encontrol el estudiante"
+
+#--------------------------------
+frutas = ['manzanas','fresa','cereza']
+adjetivos = ['roja','grande','deliciosa']
+
+for fruta in frutas:
+    for tipo in adjetivos:
+        print(fruta, tipo)
+
+#---------------------------------
+lista = [10,20,30,40]
+for numero in reversed(lista):
+    print(numero)
+
+
+#------------Ejercicio-------------
+tablas = int(input("# Numero de tablas a calcular:"))
+for i in range(1, tablas + 1):
+    print("Tabla de multiplicar del: ", i)
+    contador = 1
+
+    while contador < 11:
+        print(i * contador, end = ' ') # end --> genera un espacio entre lineas
+        contador += 1
+    print("\n") #genera un salto de pagina de las lineas
