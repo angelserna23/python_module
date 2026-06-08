@@ -54,9 +54,9 @@ arreglo = np.array([[1,2,3],
                     [4,5,6]])
 
 dimensiones = arreglo.shape
-print(f"Renglones: {dimensiones[0]}")
-print(f"Columnas: {dimensiones[1]}")
-print(f"El primer elemento del arreglo es: {arreglo[0][0]}")
+#print(f"Renglones: {dimensiones[0]}")
+#print(f"Columnas: {dimensiones[1]}")
+#print(f"El primer elemento del arreglo es: {arreglo[0][0]}")
 
 # Ejemplo de un ciclo for en Python
 # Inciso a)
@@ -69,10 +69,10 @@ for renglon in range(dimensiones[0]):
     for columna in range(dimensiones[1]):
         arreglo_final[renglon][columna] = arreglo_final[renglon][columna] + 3
 
-print(arreglo_final)
+#print(arreglo_final)
 
 fin = time.time()
-print(f"Tiempo total de ejecucion (Segundos.) {fin - inicio}")
+#print(f"Tiempo total de ejecucion (Segundos.) {fin - inicio}")
 
 # Ejemplo de un ciclo con Operaciones Vectorizadas
 # Inciso b)
@@ -80,8 +80,95 @@ import time
 inicio = time.time()
 
 arreglo_final = arreglo + 3
-print(arreglo_final)
+#print(arreglo_final)
 
 fin = time.time()
 
-print(f"Tiempo total de ejecucion (Segundos): {fin - inicio}")
+#print(f"Tiempo total de ejecucion (Segundos): {fin - inicio}")
+
+#----------------------------------------------------------------------------
+'''
+Broadcasting
+- Es una tecnica que permite realizar operaciones entre arreglos de diferentes formas y tamaños
+- Permite realizar operaciones entre arreglos sin necesidad de realizar ciclos for
+'''
+
+# Multiplicacion por un escalar
+arreglo_prod = arreglo * 3
+#print(arreglo_prod)
+
+# Adicion de dos arreglos
+arreglo1 = np.array([[1,2,3],
+                     [4,5,6]])
+arreglo2 = np.array([[7,8,9],
+                     [10,11,12]])
+
+arreglo_suma = arreglo1 + arreglo2
+#print(arreglo_suma)
+
+# Evaluacion de condiciones
+arreglo_condicion1 = np.array([[1,2,3],
+                               [4,5,6]])
+
+evaluacion = arreglo_condicion1 > 2
+#print(evaluacion)
+
+# Las funciones de Python no estan vectorizadas de origen
+arreglo_condicion2 = np.array(["Numpy","maneja","vectorizacion"])
+#evaluacion2 = arreglo_condicion2 > 5
+#print(evaluacion2) # False
+
+# Transformacion para vectorizacion la funcion len()
+len_vectorizada = np.vectorize(len)
+evaluacion3 = len_vectorizada(arreglo_condicion2) > 5
+#print(evaluacion3)
+
+
+#----------------------------------------------------------------------------
+#Broadcasting de renglones
+arreglo = np.arange(10).reshape(2,5)
+#print(arreglo)
+
+arreglo_broadcast = arreglo + np.array([1,2,3,4,5])
+#print(arreglo_broadcast)
+
+#Broadcasting de columnas
+arreglo = np.arange(10).reshape(2,5)
+#print(arreglo)
+
+arreglo_broadcast = arreglo + np.array([0,1]).reshape(2,1)
+#print(arreglo_broadcast)
+
+#----------------------------------------------------------------------------
+# Voltear a un arreglo
+arreglo = np.array([[1.1,1.2,1.3],
+                    [2.1,2.2,2.3],
+                    [3.1,3.2,3.3]])
+volteado = np.flip(arreglo)
+#print(volteado)
+
+# Transposicion de un arreglo
+arreglo = np.array([[1.1,1.2,1.3],
+                    [2.1,2.2,2.3],
+                    [3.1,3.2,3.3]])
+transpuesto = np.transpose(arreglo)
+print(transpuesto)
+
+#----------------------------------------------------------------------------
+# Operacion1
+arreglo_ejercicio1 = np.array([[1,2],
+                              [3,4]])
+arreglo_ejercicio2 = np.array([[5],
+                               [10]])
+
+multiplicacion = arreglo_ejercicio1 * arreglo_ejercicio2
+#print(multiplicacion)
+
+# Operacion2
+arreglo_ejercicio3 = np.array([[1,2],
+                              [3,4]])
+arreglo_ejercicio4 = np.array([[5,10]])
+
+resta = arreglo_ejercicio3 - arreglo_ejercicio4
+#print(resta)
+

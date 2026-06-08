@@ -38,13 +38,13 @@ Aqui se toma como la jerarquia de operaciones en donde comenzamos
     4.- Sumas y Restas
     5.- De izquierda a derecha
 '''
-x = 1 + 2 + 3 * 5  / 2
+#x = 1 + 2 + 3 * 5  / 2
 
-print(x) # Resultado -> 10.5
+#print(x) # Resultado -> 10.5
 
-y = 1 + 2 ** 3 / 4 * 5
+#y = 1 + 2 ** 3 / 4 * 5
 
-print(y) # Resultado -> 11
+#print(y) # Resultado -> 11
 
 w = (1+2) ** 3 / 4 * 5
 
