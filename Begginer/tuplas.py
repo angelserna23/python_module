@@ -34,4 +34,4 @@ tuplas = diccionario.items()
 
 d = {'d': 10, 'b': 15, 'g': 25}
 tuplas = sorted(d.items())
-print(tuplas)
+print(tuplas) # Resultado: [('b', 15), ('d', 10), ('g', 25)]

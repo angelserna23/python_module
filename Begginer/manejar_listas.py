@@ -46,7 +46,7 @@ print(listado)
 listado.append("libro")
 listado.append(100)
 
-print(listado)
+print(listado) # Resultado: ['libro', 100]
 
 '''Uso de funcion sort'''
 #Nos sirve para organizar una lista por orden alfabetico
