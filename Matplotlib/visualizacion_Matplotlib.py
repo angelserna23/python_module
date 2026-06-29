@@ -58,4 +58,56 @@ ax.set_ylabel("Grados Centigrados") # Aqui definimos nombre para el eje y
 
 plt.show() # Esto muestra el grafico
 
+'''
+fig (Figure) → es toda la imagen o ventana completa.
+ax (Axes) → es la gráfica que va dentro de esa ventana.
+
+fig, ax = plt.subplots()
+
+Resultado:
++---------------------+
+|       fig           |
+|  +---------------+  |
+|  |      ax       |  |
+|  |   gráfica     |  |
+|  +---------------+  |
++---------------------+
+
+¿Cómo saber qué poner dentro de ax?
+
+Depende del tipo de gráfica:
+Línea	ax.plot(x, y)
+Barras	ax.bar(x, y)
+Histograma	ax.hist(x)
+Dispersión	ax.scatter(x, y)
+Pastel	ax.pie(valores)
+Caja   ax.boxplot(datos)
+
+Regla rápida
+Si el gráfico compara dos variables → normalmente usas x y y.
+Si el gráfico muestra la distribución de una sola variable → solo usas una columna.
+
+
+Gráfica         Variables
+Histograma	        1
+Boxplot	            1
+Barras	            2
+Línea	            2
+Scatter	            2
+
+Regla de oro para Matplotlib
+
+Antes de escribir el código, responde estas preguntas:
+
+¿Qué quiero mostrar?
+Distribución → Histograma o Boxplot
+Comparación → Barras
+Evolución en el tiempo → Línea
+Relación entre variables → Scatter
+
+¿Necesito resumir o agrupar datos primero?
+Sí → groupby, count, value_counts, mean, etc, sum.
+No → usar columnas directamente.
+'''
+
 
